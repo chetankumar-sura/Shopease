@@ -1,0 +1,81 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+<!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"> -->
+    <!-- <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1200x300?text=Welcome+to+ShopEase" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x300?text=Best+Deals+on+Electronics" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://via.placeholder.com/1200x300?text=Fashion+Trends+2025" class="d-block w-100" alt="Banner 3">
+        </div>
+    </div> -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button> -->
+<div>
+    <marquee behavior="scroll" direction="left" class="bg-success text-white py-2">
+        🚀 Free Worldwide Shipping on All Orders Over $150 USD! for Electronics, Fashion Collections Only | New Arrivals Just Landed! | Exclusive Discounts Available Now! Order Now!! 🚀
+    </marquee>
+</div>
+
+
+<div class="container text-center mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% url 'category1' %}" class="btn btn-outline-primary btn-lg d-block p-5">Electronics</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'category2' %}" class="btn btn-outline-success btn-lg d-block p-5">Fashion</a>
+        </div>
+        <div class="col-md-4">
+            <a href="{% url 'category3' %}" class="btn btn-outline-danger btn-lg d-block p-5">Groceries</a>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 p-4 bg-light text-center">
+    <h2>Why Shop with Us?</h2>
+    <p>ShopEase provides the best deals on electronics, fashion, and groceries. Quality products at unbeatable prices!</p>
+</div>
+  
+<br> <br> <br>
+
+<div class="container mt-5" id = "about">
+    <h2 class="text-center">About Us</h2>
+    <hr class="w-25 mx-auto">
+    
+    <p class="text-center font-italic font-weight-bold text-muted">
+        An exclusive connection to Indian artisans for more meaningful buying.
+        <br> Menswear and accessories crafted for you in numerous colors and refined materials.
+    </p>
+
+    <div class="mt-4">
+        <h4 class="text-center">Who We Are</h4>
+        <p class="text-justify">
+            Starting in 2020 out of our family workshop in Bengaluru, India; we have teamed up with 8 fellow Indian <i>artigiani</i> or craftsmen,
+            all very eager to showcase their artisanal heritage and quintessential designs.
+        </p>
+        <p class="text-justify">
+            From hand-hemmed tips to hand-stitched shoulders, our artisans craft all our garments and accessories according to
+            the highest quality standards to create hard-wearing everyday pieces for timeless casual elegance.
+        </p>
+        <p class="text-justify">
+            To make this happen, we provide them with the canvas to turn into their next creation. We travel around India, visiting mills
+            and merchants to find the best fabrics and yarns, making sure they are natural, colorful, and responsibly sourced.
+        </p>
+        <p class="text-justify">
+           Firstly,we started with a small collection of menswear and accessories, and we are now expanding our range to include womenswear and home goods like groceries and elctronics.
+        </p>
+    </div>
+</div>
+
+
+
+{% endblock %}

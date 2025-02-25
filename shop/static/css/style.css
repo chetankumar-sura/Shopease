@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.btn {
+    font-size: 20px;
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+}
