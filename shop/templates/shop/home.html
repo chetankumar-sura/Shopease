@@ -9,31 +9,18 @@
 </div>
 
 
-<!-- <div class="container text-center mt-4">
-    <div class="row">
-        <div class="col-md-4">
-            <a href="{% url 'category1' %}" class="btn btn-outline-primary btn-lg d-block p-5">Electronics</a>
-        </div>
-        <div class="col-md-4">
-            <a href="{% url 'category2' %}" class="btn btn-outline-success btn-lg d-block p-5">Fashion</a>
-        </div>
-        <div class="col-md-4">
-            <a href="{% url 'category3' %}" class="btn btn-outline-danger btn-lg d-block p-5">Accessories</a>
-        </div>
-    </div>
-</div> -->
 
 <div class="container mt-4 text-center">
     <h2>Select a Category</h2>
     <div class="row mt-4">
         <div class="col-md-4">
-            <a href="{% url 'category_products' 'electronics' %}" class="btn btn-outline-primary btn-lg ">Electronics</a>
+            <a href="{% url 'category_products' 'electronics' %}" class="btn btn-outline-primary btn-lg d-block p-5">Electronics</a>
         </div>
         <div class="col-md-4">
-            <a href="{% url 'category_products' 'fashion' %}" class="btn btn-outline-success btn-lg ">Fashion</a>
+            <a href="{% url 'category_products' 'fashion' %}" class="btn btn-outline-success btn-lg d-block p-5">Fashion</a>
         </div>
         <div class="col-md-4">
-            <a href="{% url 'category_products' 'accessories' %}" class="btn btn-outline-danger btn-lg">Accessories</a>
+            <a href="{% url 'category_products' 'accessories' %}" class="btn btn-outline-danger btn-lg d-block p-5">Accessories</a>
         </div>
     </div>
 </div>
@@ -43,31 +30,7 @@
     <p>ShopEase provides the best deals on electronics, fashion, and accessories. Quality products at unbeatable prices!</p>
 </div>
   
-<br> 
 
-<div class="container mt-5">
-    <h2 class="text-center">Latest Products</h2>
-    <hr class="w-25 mx-auto">
-
-    <div class="row">
-        {% for product in products %}
-        <div class="col-md-4">
-            <div class="card">
-                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                <div class="card-body text-center">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="'card-text">{{product.description|truncatewords:10}}</p>
-                    <p class="font-weight-bold text-primary">Price: ${{product.price}}</p>
-                    <a href="#" class="btn btn-success">Buy Now</a>
-                </div>
-            </div>
-        </div>
-        {% empty %}
-        <p class="text-cemter">No products available</p>
-        {% endfor %}
-    </div>
-
-</div>
 
 <br> <br> <br>
 
@@ -101,7 +64,32 @@
     </div>
 </div>
 
+<br>
 
+
+<div class="container mt-5">
+    <h2 class="text-center">Latest Products</h2>
+    <hr class="w-25 mx-auto">
+
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="'card-text">{{product.description|truncatewords:10}}</p>
+                    <p class="font-weight-bold text-primary">Price: ${{product.price}}</p>
+                    <a href="#" class="btn btn-success">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-cemter">Check in Categories.</p>
+        {% endfor %}
+    </div>
+
+</div>
 
 
 
