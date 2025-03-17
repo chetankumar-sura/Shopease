@@ -1,0 +1,27 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="text-center">{{ category|capfirst }} Products</h2>
+    <hr class="w-25 mx-auto">
+    
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description|truncatewords:10 }}</p>
+                    <p class="font-weight-bold text-primary">${{ product.price }}</p>
+                    <a href="#" class="btn btn-success">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No products available in this category</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
